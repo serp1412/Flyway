@@ -1,19 +1,26 @@
-//
-//  ViewController.swift
-//  Flyway
-//
-//  Created by Macbook on 29.03.2021.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        AppEnvironment.current.api.getAirports { result in
+            switch result {
+            case .success(let airports):
+                print(airports)
+            case .failure(let error):
+                print(error)
+            }
+        }
+        
+        AppEnvironment.current.api.getFlights { result in
+            switch result {
+            case .success(let flights):
+                print(flights)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
-
-
 }
 

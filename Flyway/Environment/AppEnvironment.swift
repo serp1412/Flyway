@@ -1,5 +1,5 @@
-import Foundation
-
+// If you're curious to know more about AppEnvironment approach it's inspired by
+// the brilliant techies at pointfree.co and Kickstarter's open source project
 struct AppEnvironment {
     private static var environments = [Environment()]
 

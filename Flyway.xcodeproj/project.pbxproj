@@ -16,7 +16,10 @@
 		1810D1FB2612447300CC7A06 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1810D1F92612447300CC7A06 /* Environment.swift */; };
 		1810D200261244CE00CC7A06 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1810D1FF261244CE00CC7A06 /* API.swift */; };
 		1810D203261247B000CC7A06 /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1810D202261247B000CC7A06 /* RequestType.swift */; };
-		1810D2062612487800CC7A06 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1810D2052612487800CC7A06 /* APIResponse.swift */; };
+		1810D20F2612566700CC7A06 /* Airport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1810D20E2612566700CC7A06 /* Airport.swift */; };
+		1810D21526125C1100CC7A06 /* AirportsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1810D21426125C1100CC7A06 /* AirportsRequest.swift */; };
+		1810D21926130D5B00CC7A06 /* FlightsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1810D21826130D5B00CC7A06 /* FlightsRequest.swift */; };
+		1810D21D26130D7000CC7A06 /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1810D21C26130D7000CC7A06 /* Flight.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +34,10 @@
 		1810D1F92612447300CC7A06 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		1810D1FF261244CE00CC7A06 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		1810D202261247B000CC7A06 /* RequestType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
-		1810D2052612487800CC7A06 /* APIResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		1810D20E2612566700CC7A06 /* Airport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airport.swift; sourceTree = "<group>"; };
+		1810D21426125C1100CC7A06 /* AirportsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsRequest.swift; sourceTree = "<group>"; };
+		1810D21826130D5B00CC7A06 /* FlightsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsRequest.swift; sourceTree = "<group>"; };
+		1810D21C26130D7000CC7A06 /* Flight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +96,10 @@
 			children = (
 				1810D1FF261244CE00CC7A06 /* API.swift */,
 				1810D202261247B000CC7A06 /* RequestType.swift */,
-				1810D2052612487800CC7A06 /* APIResponse.swift */,
+				1810D21426125C1100CC7A06 /* AirportsRequest.swift */,
+				1810D21826130D5B00CC7A06 /* FlightsRequest.swift */,
+				1810D20E2612566700CC7A06 /* Airport.swift */,
+				1810D21C26130D7000CC7A06 /* Flight.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -164,14 +173,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1810D20F2612566700CC7A06 /* Airport.swift in Sources */,
+				1810D21926130D5B00CC7A06 /* FlightsRequest.swift in Sources */,
 				1810D1E5261233A600CC7A06 /* ViewController.swift in Sources */,
 				1810D1FA2612447300CC7A06 /* AppEnvironment.swift in Sources */,
 				1810D203261247B000CC7A06 /* RequestType.swift in Sources */,
 				1810D1E1261233A600CC7A06 /* AppDelegate.swift in Sources */,
 				1810D1E3261233A600CC7A06 /* SceneDelegate.swift in Sources */,
-				1810D2062612487800CC7A06 /* APIResponse.swift in Sources */,
 				1810D200261244CE00CC7A06 /* API.swift in Sources */,
+				1810D21D26130D7000CC7A06 /* Flight.swift in Sources */,
 				1810D1FB2612447300CC7A06 /* Environment.swift in Sources */,
+				1810D21526125C1100CC7A06 /* AirportsRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

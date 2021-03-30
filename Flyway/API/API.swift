@@ -1,46 +1,32 @@
 import Foundation
 
 protocol APIType {
-    //    func getHeroes(name: String?, offset: Int, completion: @escaping (Result<APICollection<MarvelHero>>) -> ())
-    //    func getHeroProducts(kind: HeroProductsRequest.Kind, heroId: MarvelHero.Id, limit: Int, completion: @escaping (Result<APICollection<HeroProduct>>) -> ())
+    func getAirports(completion: @escaping (Result<[Airport], APIError>) -> ())
+    func getFlights(completion: @escaping (Result<[Flight], APIError>) -> ())
 }
 
-extension APIType {
-    //    func getHeroes(name: String? = nil, offset: Int = 0, completion: @escaping (Result<APICollection<MarvelHero>>) -> ()) {
-    //        getHeroes(name: name, offset: offset, completion: completion)
-    //    }
-    //
-    //    func getHeroProducts(kind: HeroProductsRequest.Kind, heroId: MarvelHero.Id, limit: Int = 0, completion: @escaping (Result<APICollection<HeroProduct>>) -> ()) {
-    //        getHeroProducts(kind: kind, heroId: heroId, limit: limit, completion: completion)
-    //    }
-}
-
-class APIError: Error {
-    
-}
+class APIError: Error {}
 
 class API: APIType {
-    //    func getHeroes(name: String?, offset: Int, completion: @escaping (Result<APICollection<MarvelHero>>) -> ()) {
-    //        let request: HeroListRequest = .init(options: name.flatMap(HeroListRequest.Options.name), .offset(offset))
-    //
-    //        perform(request: request, completion: completion)
-    //    }
-    //
-    //    func getHeroProducts(kind: HeroProductsRequest.Kind, heroId: MarvelHero.Id, limit: Int, completion: @escaping (Result<APICollection<HeroProduct>>) -> ()) {
-    //        let request: HeroProductsRequest = .init(kind: kind, options: .heroId(heroId), limit > 0 ? .limit(limit) : nil)
-    //
-    //        perform(request: request, completion: completion)
-    //    }
+    func getAirports(completion: @escaping (Result<[Airport], APIError>) -> ()) {
+        perform(request: AirportsRequest(), completion: completion)
+    }
+    
+    func getFlights(completion: @escaping (Result<[Flight], APIError>) -> ()) {
+        perform(request: FlightsRequest(), completion: completion)
+    }
     
     private func perform<R: RequestType>(request: R,
                                          completion: @escaping (Result<R.ResponseType, APIError>) -> ()) {
         URLSession.shared.dataTask(with: request.url) { (data, _, _) in
-            guard let data = data,
-                  let response = try? JSONDecoder().decode(APIResponse<R.ResponseType>.self, from: data) else {
-                return callOnMain(completion,
-                                  with: .failure(APIError()))
+            guard let data = data else { return } // TODO: no data error
+            
+            do {
+                let response = try JSONDecoder().decode(R.ResponseType.self, from: data)
+                callOnMain(completion, with: .success(response))
+            } catch {
+                callOnMain(completion, with: .failure(APIError())) // TODO: parsing error
             }
-            callOnMain(completion, with: .success(response.data))
         }.resume()
     }
 }
