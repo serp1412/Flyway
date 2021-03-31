@@ -78,6 +78,16 @@ extension AirportMapViewController: MKMapViewDelegate {
         guard let point = view.annotation as? AirportPoint else { return }
         print(point)
     }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let pin = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: nil)
+        guard let point = annotation as? AirportPoint else { return pin }
+        pin.markerTintColor = viewModel.shouldHighlight(airport: point.airport)
+            ? .green
+            : .red
+        
+        return pin
+    }
 }
 
 fileprivate class AirportPoint: MKPointAnnotation {
