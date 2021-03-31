@@ -3,13 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1810D1E1261233A600CC7A06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1810D1E0261233A600CC7A06 /* AppDelegate.swift */; };
 		1810D1E3261233A600CC7A06 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1810D1E2261233A600CC7A06 /* SceneDelegate.swift */; };
-		1810D1E5261233A600CC7A06 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1810D1E4261233A600CC7A06 /* ViewController.swift */; };
+		1810D1E5261233A600CC7A06 /* AirportMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1810D1E4261233A600CC7A06 /* AirportMapViewController.swift */; };
 		1810D1EA261233A900CC7A06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1810D1E9261233A900CC7A06 /* Assets.xcassets */; };
 		1810D1ED261233A900CC7A06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1810D1EB261233A900CC7A06 /* LaunchScreen.storyboard */; };
 		1810D1FA2612447300CC7A06 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1810D1F82612447300CC7A06 /* AppEnvironment.swift */; };
@@ -20,13 +20,16 @@
 		1810D21526125C1100CC7A06 /* AirportsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1810D21426125C1100CC7A06 /* AirportsRequest.swift */; };
 		1810D21926130D5B00CC7A06 /* FlightsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1810D21826130D5B00CC7A06 /* FlightsRequest.swift */; };
 		1810D21D26130D7000CC7A06 /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1810D21C26130D7000CC7A06 /* Flight.swift */; };
+		1854442C2614D8D900526C34 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1854442B2614D8D900526C34 /* UIExtensions.swift */; };
+		188893C62613B74E00C7D1F3 /* AirportMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188893C52613B74E00C7D1F3 /* AirportMapViewModel.swift */; };
+		4B5FC33345D514965C1F17FE /* Pods_Flyway.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AD2788A6FA54725C5ED9846 /* Pods_Flyway.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1810D1DD261233A600CC7A06 /* Flyway.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flyway.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1810D1E0261233A600CC7A06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1810D1E2261233A600CC7A06 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1810D1E4261233A600CC7A06 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1810D1E4261233A600CC7A06 /* AirportMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportMapViewController.swift; sourceTree = "<group>"; };
 		1810D1E9261233A900CC7A06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1810D1EC261233A900CC7A06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1810D1EE261233A900CC7A06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -38,6 +41,11 @@
 		1810D21426125C1100CC7A06 /* AirportsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsRequest.swift; sourceTree = "<group>"; };
 		1810D21826130D5B00CC7A06 /* FlightsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsRequest.swift; sourceTree = "<group>"; };
 		1810D21C26130D7000CC7A06 /* Flight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
+		1854442B2614D8D900526C34 /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
+		188893C52613B74E00C7D1F3 /* AirportMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportMapViewModel.swift; sourceTree = "<group>"; };
+		4AD2788A6FA54725C5ED9846 /* Pods_Flyway.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flyway.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		621A78CBE1DDAF3C9E401705 /* Pods-Flyway.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flyway.debug.xcconfig"; path = "Target Support Files/Pods-Flyway/Pods-Flyway.debug.xcconfig"; sourceTree = "<group>"; };
+		82F2112BC952B25E56D7480E /* Pods-Flyway.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flyway.release.xcconfig"; path = "Target Support Files/Pods-Flyway/Pods-Flyway.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B5FC33345D514965C1F17FE /* Pods_Flyway.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +65,8 @@
 			children = (
 				1810D1DF261233A600CC7A06 /* Flyway */,
 				1810D1DE261233A600CC7A06 /* Products */,
+				F5D3F3E66488FCA04B48A59D /* Pods */,
+				7B45B15410A8B2560BFAB677 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,9 +83,10 @@
 			children = (
 				1810D1E0261233A600CC7A06 /* AppDelegate.swift */,
 				1810D1E2261233A600CC7A06 /* SceneDelegate.swift */,
+				1854442A2614D8C800526C34 /* Extensions */,
 				1810D1F72612446800CC7A06 /* Environment */,
 				1810D1FE261244BC00CC7A06 /* API */,
-				1810D1E4261233A600CC7A06 /* ViewController.swift */,
+				188893C32613B72700C7D1F3 /* Modules */,
 				1810D1E9261233A900CC7A06 /* Assets.xcassets */,
 				1810D1EB261233A900CC7A06 /* LaunchScreen.storyboard */,
 				1810D1EE261233A900CC7A06 /* Info.plist */,
@@ -104,6 +116,48 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		1854442A2614D8C800526C34 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1854442B2614D8D900526C34 /* UIExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		188893C32613B72700C7D1F3 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				188893C42613B73800C7D1F3 /* AirportMap */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		188893C42613B73800C7D1F3 /* AirportMap */ = {
+			isa = PBXGroup;
+			children = (
+				1810D1E4261233A600CC7A06 /* AirportMapViewController.swift */,
+				188893C52613B74E00C7D1F3 /* AirportMapViewModel.swift */,
+			);
+			path = AirportMap;
+			sourceTree = "<group>";
+		};
+		7B45B15410A8B2560BFAB677 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4AD2788A6FA54725C5ED9846 /* Pods_Flyway.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F5D3F3E66488FCA04B48A59D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				621A78CBE1DDAF3C9E401705 /* Pods-Flyway.debug.xcconfig */,
+				82F2112BC952B25E56D7480E /* Pods-Flyway.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -111,9 +165,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1810D1F1261233A900CC7A06 /* Build configuration list for PBXNativeTarget "Flyway" */;
 			buildPhases = (
+				2878670CD0916FEAE711AA40 /* [CP] Check Pods Manifest.lock */,
 				1810D1D9261233A600CC7A06 /* Sources */,
 				1810D1DA261233A600CC7A06 /* Frameworks */,
 				1810D1DB261233A600CC7A06 /* Resources */,
+				2799731BB03F5B8D681A9E00 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -168,6 +224,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2799731BB03F5B8D681A9E00 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Flyway/Pods-Flyway-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Flyway/Pods-Flyway-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Flyway/Pods-Flyway-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2878670CD0916FEAE711AA40 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Flyway-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1810D1D9261233A600CC7A06 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -175,7 +273,9 @@
 			files = (
 				1810D20F2612566700CC7A06 /* Airport.swift in Sources */,
 				1810D21926130D5B00CC7A06 /* FlightsRequest.swift in Sources */,
-				1810D1E5261233A600CC7A06 /* ViewController.swift in Sources */,
+				1854442C2614D8D900526C34 /* UIExtensions.swift in Sources */,
+				1810D1E5261233A600CC7A06 /* AirportMapViewController.swift in Sources */,
+				188893C62613B74E00C7D1F3 /* AirportMapViewModel.swift in Sources */,
 				1810D1FA2612447300CC7A06 /* AppEnvironment.swift in Sources */,
 				1810D203261247B000CC7A06 /* RequestType.swift in Sources */,
 				1810D1E1261233A600CC7A06 /* AppDelegate.swift in Sources */,
@@ -319,6 +419,7 @@
 		};
 		1810D1F2261233A900CC7A06 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 621A78CBE1DDAF3C9E401705 /* Pods-Flyway.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -337,6 +438,7 @@
 		};
 		1810D1F3261233A900CC7A06 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82F2112BC952B25E56D7480E /* Pods-Flyway.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

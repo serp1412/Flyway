@@ -5,7 +5,14 @@ protocol APIType {
     func getFlights(completion: @escaping (Result<[Flight], APIError>) -> ())
 }
 
-class APIError: Error {}
+class APIError: Error {
+    let message: String
+    let statusCode: Int?
+    init(message: String, statusCode: Int? = nil) {
+        self.message = message
+        self.statusCode = statusCode
+    }
+}
 
 class API: APIType {
     func getAirports(completion: @escaping (Result<[Airport], APIError>) -> ()) {
@@ -18,14 +25,29 @@ class API: APIType {
     
     private func perform<R: RequestType>(request: R,
                                          completion: @escaping (Result<R.ResponseType, APIError>) -> ()) {
-        URLSession.shared.dataTask(with: request.url) { (data, _, _) in
-            guard let data = data else { return } // TODO: no data error
+        
+        URLSession.shared.dataTask(with: request.url) { (data, response, _) in
+            var result: Result<R.ResponseType, APIError>?
+            defer {
+                if let result = result {
+                    callOnMain(completion, with: result)
+                }
+            }
+            guard let data = data else {
+                return result = .failure(.init(message: "Something went terribly wrong"))
+            }
+            
+            if let response = response as? HTTPURLResponse,
+               !(200...299).contains(response.statusCode) {
+                return result = .failure(.init(message: "Request failed with \(response.statusCode)",
+                                               statusCode: response.statusCode))
+            }
             
             do {
                 let response = try JSONDecoder().decode(R.ResponseType.self, from: data)
-                callOnMain(completion, with: .success(response))
+                result = .success(response)
             } catch {
-                callOnMain(completion, with: .failure(APIError())) // TODO: parsing error
+                result = .failure(.init(message: "Failed to parse data"))
             }
         }.resume()
     }

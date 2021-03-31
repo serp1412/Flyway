@@ -1,3 +1,5 @@
+import CoreLocation
+
 struct Airport: Codable, Equatable {
     let id: String
     let name: String
@@ -5,14 +7,9 @@ struct Airport: Codable, Equatable {
     let countryId: String
     private let latitude: Double
     private let longitude: Double
-    var coordinate: Coordinate {
-        return Coordinate(latitude: latitude, longitude: longitude)
+    var coordinate: CLLocationCoordinate2D {
+        return .init(latitude: latitude, longitude: longitude)
     }
-}
-
-struct Coordinate: Codable, Equatable {
-    let latitude: Double
-    let longitude: Double
 }
 
 //{
