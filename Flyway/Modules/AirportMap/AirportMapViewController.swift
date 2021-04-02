@@ -21,7 +21,7 @@ class AirportMapViewController: UIViewController {
             map.addAnnotation(AirportPoint(airport))
         }
         
-        map.zoomOut(on: map.centerCoordinate)
+        map.zoom(on: map.centerCoordinate, radius: 6371 * 1000)
     }
     
     fileprivate func setupMap() {
@@ -76,7 +76,10 @@ extension AirportMapViewController: AirportMapView {
 extension AirportMapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         guard let point = view.annotation as? AirportPoint else { return }
-        print(point)
+        let closestAirport = viewModel.closestAirport(to: point.airport)
+        let details = AirportDetailsViewController(airport: point.airport,
+                                                   closestAirport: closestAirport)
+        present(details, animated: true)
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -101,12 +104,3 @@ fileprivate class AirportPoint: MKPointAnnotation {
     }
 }
 
-extension MKMapView {
-    func zoomOut(on location: CLLocationCoordinate2D) {
-        let regionRadius: CLLocationDistance = 6371 * 1000 // Earth's radius
-        let coordinateRegion = MKCoordinateRegion(center: location,
-                                                  latitudinalMeters: regionRadius,
-                                                  longitudinalMeters: regionRadius)
-        setRegion(coordinateRegion, animated: true)
-    }
-}

@@ -21,6 +21,8 @@
 		1810D21926130D5B00CC7A06 /* FlightsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1810D21826130D5B00CC7A06 /* FlightsRequest.swift */; };
 		1810D21D26130D7000CC7A06 /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1810D21C26130D7000CC7A06 /* Flight.swift */; };
 		1854442C2614D8D900526C34 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1854442B2614D8D900526C34 /* UIExtensions.swift */; };
+		185444352615B5AA00526C34 /* AirportDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185444342615B5AA00526C34 /* AirportDetailsViewController.swift */; };
+		1854443C26160FBD00526C34 /* MapKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1854443B26160FBD00526C34 /* MapKitExtensions.swift */; };
 		188893C62613B74E00C7D1F3 /* AirportMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188893C52613B74E00C7D1F3 /* AirportMapViewModel.swift */; };
 		4B5FC33345D514965C1F17FE /* Pods_Flyway.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AD2788A6FA54725C5ED9846 /* Pods_Flyway.framework */; };
 /* End PBXBuildFile section */
@@ -42,6 +44,8 @@
 		1810D21826130D5B00CC7A06 /* FlightsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsRequest.swift; sourceTree = "<group>"; };
 		1810D21C26130D7000CC7A06 /* Flight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
 		1854442B2614D8D900526C34 /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
+		185444342615B5AA00526C34 /* AirportDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportDetailsViewController.swift; sourceTree = "<group>"; };
+		1854443B26160FBD00526C34 /* MapKitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitExtensions.swift; sourceTree = "<group>"; };
 		188893C52613B74E00C7D1F3 /* AirportMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportMapViewModel.swift; sourceTree = "<group>"; };
 		4AD2788A6FA54725C5ED9846 /* Pods_Flyway.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flyway.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		621A78CBE1DDAF3C9E401705 /* Pods-Flyway.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flyway.debug.xcconfig"; path = "Target Support Files/Pods-Flyway/Pods-Flyway.debug.xcconfig"; sourceTree = "<group>"; };
@@ -120,13 +124,23 @@
 			isa = PBXGroup;
 			children = (
 				1854442B2614D8D900526C34 /* UIExtensions.swift */,
+				1854443B26160FBD00526C34 /* MapKitExtensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		185444332615B59D00526C34 /* AirportDetails */ = {
+			isa = PBXGroup;
+			children = (
+				185444342615B5AA00526C34 /* AirportDetailsViewController.swift */,
+			);
+			path = AirportDetails;
 			sourceTree = "<group>";
 		};
 		188893C32613B72700C7D1F3 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				185444332615B59D00526C34 /* AirportDetails */,
 				188893C42613B73800C7D1F3 /* AirportMap */,
 			);
 			path = Modules;
@@ -279,9 +293,11 @@
 				1810D1FA2612447300CC7A06 /* AppEnvironment.swift in Sources */,
 				1810D203261247B000CC7A06 /* RequestType.swift in Sources */,
 				1810D1E1261233A600CC7A06 /* AppDelegate.swift in Sources */,
+				1854443C26160FBD00526C34 /* MapKitExtensions.swift in Sources */,
 				1810D1E3261233A600CC7A06 /* SceneDelegate.swift in Sources */,
 				1810D200261244CE00CC7A06 /* API.swift in Sources */,
 				1810D21D26130D7000CC7A06 /* Flight.swift in Sources */,
+				185444352615B5AA00526C34 /* AirportDetailsViewController.swift in Sources */,
 				1810D1FB2612447300CC7A06 /* Environment.swift in Sources */,
 				1810D21526125C1100CC7A06 /* AirportsRequest.swift in Sources */,
 			);

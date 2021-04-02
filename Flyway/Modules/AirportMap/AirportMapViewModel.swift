@@ -33,6 +33,18 @@ class AirportMapViewModel {
         return longest.first == airport || longest.second == airport
     }
     
+    func closestAirport(to airport: Airport) -> Airport {
+        let distance = distances.filter { distance in
+            return distance.first == airport || distance.second == airport
+        }.sorted(by: <).first
+        
+        guard let unWrappedDistance = distance else { return airport }
+        
+        return unWrappedDistance.first == airport
+            ? unWrappedDistance.second
+            : unWrappedDistance.first
+    }
+    
     fileprivate func fetchAirports() {
         view.showLoading()
         AppEnvironment.current.api.getAirports { [weak self] result in
@@ -78,11 +90,5 @@ fileprivate struct AirportDistance {
 extension AirportDistance: Comparable {
     static func < (lhs: AirportDistance, rhs: AirportDistance) -> Bool {
         return lhs.distance < rhs.distance
-    }
-}
-
-extension CLLocationCoordinate2D {
-    var location: CLLocation {
-        return .init(latitude: latitude, longitude: longitude)
     }
 }
