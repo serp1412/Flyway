@@ -1,16 +1,11 @@
 import CoreLocation
 
-protocol AirportMapView {
+protocol AirportDisplayView: RetryDisplayable & Loadable {
     func show(airports: [Airport])
-    func show(alert: String,
-              subtitle: String?,
-              with retry: @escaping () -> Void)
-    func showLoading()
-    func hideLoading()
 }
 
 class AirportMapViewModel {
-    fileprivate(set) var view: AirportMapView!
+    fileprivate(set) var view: AirportDisplayView!
     fileprivate var distances: [AirportDistance] = []
     fileprivate var airports: [Airport] = [] {
         didSet {
@@ -20,7 +15,7 @@ class AirportMapViewModel {
     }
     
     
-    init(view: AirportMapView) {
+    init(view: AirportDisplayView) {
         self.view = view
     }
     

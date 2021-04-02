@@ -1,6 +1,6 @@
 import CoreLocation
 
-struct Airport: Codable, Equatable {
+struct Airport: Codable, Equatable, Hashable {
     let id: String
     let name: String
     let city: String

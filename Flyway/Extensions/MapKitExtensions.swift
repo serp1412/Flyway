@@ -20,3 +20,9 @@ extension CLLocationCoordinate2D {
         return .init(latitude: latitude, longitude: longitude)
     }
 }
+
+extension Double {
+    var display: String {
+        return "\(Int(self / 1000))km"
+    }
+}

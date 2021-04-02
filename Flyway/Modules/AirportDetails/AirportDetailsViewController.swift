@@ -53,7 +53,7 @@ class AirportDetailsViewController: UIViewController {
                                                  text: "\(closestAirport.name)"))
         let distance = airport.coordinate.distance(from: closestAirport.coordinate)
         stackView.addArrangedSubview(createLabel(withPrefix: "Distance",
-                                                 text: "\(Int(distance / 1000))km"))
+                                                 text: distance.display))
         stackView.addArrangedSubview(UIView())
         
         return stackView

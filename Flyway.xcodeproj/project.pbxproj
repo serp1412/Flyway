@@ -23,6 +23,8 @@
 		1854442C2614D8D900526C34 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1854442B2614D8D900526C34 /* UIExtensions.swift */; };
 		185444352615B5AA00526C34 /* AirportDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185444342615B5AA00526C34 /* AirportDetailsViewController.swift */; };
 		1854443C26160FBD00526C34 /* MapKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1854443B26160FBD00526C34 /* MapKitExtensions.swift */; };
+		185444432617123200526C34 /* FlightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185444422617123200526C34 /* FlightsViewController.swift */; };
+		1854444B261741CB00526C34 /* FlightsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1854444A261741CB00526C34 /* FlightsViewModel.swift */; };
 		188893C62613B74E00C7D1F3 /* AirportMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188893C52613B74E00C7D1F3 /* AirportMapViewModel.swift */; };
 		4B5FC33345D514965C1F17FE /* Pods_Flyway.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AD2788A6FA54725C5ED9846 /* Pods_Flyway.framework */; };
 /* End PBXBuildFile section */
@@ -46,6 +48,8 @@
 		1854442B2614D8D900526C34 /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
 		185444342615B5AA00526C34 /* AirportDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportDetailsViewController.swift; sourceTree = "<group>"; };
 		1854443B26160FBD00526C34 /* MapKitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitExtensions.swift; sourceTree = "<group>"; };
+		185444422617123200526C34 /* FlightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsViewController.swift; sourceTree = "<group>"; };
+		1854444A261741CB00526C34 /* FlightsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsViewModel.swift; sourceTree = "<group>"; };
 		188893C52613B74E00C7D1F3 /* AirportMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportMapViewModel.swift; sourceTree = "<group>"; };
 		4AD2788A6FA54725C5ED9846 /* Pods_Flyway.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flyway.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		621A78CBE1DDAF3C9E401705 /* Pods-Flyway.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flyway.debug.xcconfig"; path = "Target Support Files/Pods-Flyway/Pods-Flyway.debug.xcconfig"; sourceTree = "<group>"; };
@@ -137,9 +141,19 @@
 			path = AirportDetails;
 			sourceTree = "<group>";
 		};
+		185444412617121D00526C34 /* Flights */ = {
+			isa = PBXGroup;
+			children = (
+				185444422617123200526C34 /* FlightsViewController.swift */,
+				1854444A261741CB00526C34 /* FlightsViewModel.swift */,
+			);
+			path = Flights;
+			sourceTree = "<group>";
+		};
 		188893C32613B72700C7D1F3 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				185444412617121D00526C34 /* Flights */,
 				185444332615B59D00526C34 /* AirportDetails */,
 				188893C42613B73800C7D1F3 /* AirportMap */,
 			);
@@ -291,6 +305,7 @@
 				1810D1E5261233A600CC7A06 /* AirportMapViewController.swift in Sources */,
 				188893C62613B74E00C7D1F3 /* AirportMapViewModel.swift in Sources */,
 				1810D1FA2612447300CC7A06 /* AppEnvironment.swift in Sources */,
+				185444432617123200526C34 /* FlightsViewController.swift in Sources */,
 				1810D203261247B000CC7A06 /* RequestType.swift in Sources */,
 				1810D1E1261233A600CC7A06 /* AppDelegate.swift in Sources */,
 				1854443C26160FBD00526C34 /* MapKitExtensions.swift in Sources */,
@@ -298,6 +313,7 @@
 				1810D200261244CE00CC7A06 /* API.swift in Sources */,
 				1810D21D26130D7000CC7A06 /* Flight.swift in Sources */,
 				185444352615B5AA00526C34 /* AirportDetailsViewController.swift in Sources */,
+				1854444B261741CB00526C34 /* FlightsViewModel.swift in Sources */,
 				1810D1FB2612447300CC7A06 /* Environment.swift in Sources */,
 				1810D21526125C1100CC7A06 /* AirportsRequest.swift in Sources */,
 			);
@@ -440,6 +456,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7C2WZ3W3L2;
 				INFOPLIST_FILE = Flyway/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -459,6 +476,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7C2WZ3W3L2;
 				INFOPLIST_FILE = Flyway/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

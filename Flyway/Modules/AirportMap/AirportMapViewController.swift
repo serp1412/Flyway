@@ -34,42 +34,9 @@ class AirportMapViewController: UIViewController {
     }
 }
 
-extension AirportMapViewController: AirportMapView {
+extension AirportMapViewController: AirportDisplayView {
     func show(airports: [Airport]) {
         addToMap(airports)
-    }
-    
-    func show(alert: String, subtitle: String?, with retry: @escaping () -> Void) {
-        let alert = UIAlertController(title: alert,
-                                      message: subtitle,
-                                      preferredStyle: .alert)
-        alert.addAction(.init(title: "Cancel", style: .cancel))
-        alert.addAction(.init(title: "Retry",
-                              style: .default,
-                              handler: { _ in retry() }))
-        
-        present(alert, animated: true)
-    }
-    
-    func showLoading() {
-        let loaderView = UIView()
-        loaderView.backgroundColor = UIColor.black.withAlphaComponent(0.4)
-        let spinner = UIActivityIndicatorView(style: .large)
-        spinner.startAnimating()
-        loaderView.addSubview(spinner)
-        spinner.snp.makeConstraints { make in
-            make.center.equalToSuperview()
-        }
-        view.addSubview(loaderView)
-        loaderView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
-        loaderView.appear()
-        self.loaderView = loaderView
-    }
-    
-    func hideLoading() {
-        loaderView?.dissappear()
     }
 }
 
