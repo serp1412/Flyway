@@ -31,7 +31,7 @@ class AirportMapViewModel {
     func closestAirport(to airport: Airport) -> Airport {
         let distance = distances.filter { distance in
             return distance.first == airport || distance.second == airport
-        }.sorted(by: <).first
+        }.sorted().first
         
         guard let unWrappedDistance = distance else { return airport }
         
