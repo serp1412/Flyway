@@ -18,7 +18,7 @@ On the second tab they would like to see a list of airports that could be reache
 
 ## Rules & recommendations
 * We’re using this test to assess your programming skills, so please give it your best shot! If you’re in doubt between finishing more features or doing something according to your standards, we recommend doing it according to your standards (and finishing less features).
-* Please work on the assignment for no more than 12 hours. If you’re not done, don’t worry about it. Just stop and hand it in. If you run into planning issues, please reach out to us! We’d rather wait a week than have an assignment that’s not a good indication of your skill level.
+* Please work on the assignment for no more than **12 hours**. If you’re not done, don’t worry about it. Just stop and hand it in. If you run into planning issues, please reach out to us! We’d rather wait a week than have an assignment that’s not a good indication of your skill level.
 * Log the time working you spent working on this test. 
 * The app needs to run on iOS 14 and above.
 * The UI has to be built programmatically. Storyboards and SwiftUI are not permitted.
